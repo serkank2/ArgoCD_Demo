@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginxServices
+  name: nginxservices
 spec:
   selector:
-    app: nginxDeployment
+    app: nginxdeployment
   ports:
   - port: 80
     targetPort: 80

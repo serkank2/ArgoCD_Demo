@@ -1,9 +1,9 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: nginxIngress
+  name: nginxingress
   labels:
-    name: nginxIngress
+    name: nginxingress
 spec:
   rules:
   - host: example.com
@@ -13,6 +13,6 @@ spec:
         path: "/"
         backend:
           service:
-            name: nginxServices
+            name: nginxservices
             port: 
               number: 80
