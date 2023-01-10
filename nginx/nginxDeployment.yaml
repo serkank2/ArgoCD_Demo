@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginxDeployment
+spec:
+  selector:
+    matchLabels:
+      app: nginxDeployment
+  template:
+    metadata:
+      labels:
+        app: nginxDeployment
+    spec:
+      containers:
+      - name: nginxDeployment
+        image: nginx
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80
